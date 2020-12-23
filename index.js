@@ -24,15 +24,14 @@ var characterCount = document.getElementById('counterFooter');
 var tweetButton = document.getElementById('btn');
 
 
-input.addEventListener("keypress", () => {
+input.addEventListener("keyup", () => {
     var text = input.value;
-    var countDown = 140 - (input.value.length + 1);
-    // if (countDown <= 20) {
-    //     characterCount.getElementById(id).style.color = "red";
-    // }
-    console.log(text, countDown)
+    var countDown = 140 - (input.value.length);
+    countDown <= 20 ? document.getElementById("counterFooter").style.color = "red" : document.getElementById("counterFooter").style.color = "white";
     characterCount.innerHTML = countDown + "/140";
-    
+    if (countDown = 0) {
+        event.preventDefault();
+    }
 });
 
 tweetButton.addEventListener("click", () => {
