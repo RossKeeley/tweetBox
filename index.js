@@ -20,6 +20,7 @@ Follow me on twitter @DThompsonDev so you can find who who is selected! I hope i
 */
 
 var input = document.getElementById("string");
+document.getElementById("string").setAttribute("minlength", "0");
 var characterCount = document.getElementById('counterFooter');
 var tweetButton = document.getElementById('btn');
 
