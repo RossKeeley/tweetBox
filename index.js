@@ -18,24 +18,27 @@ There will be multiple winners that I select!
 Follow me on twitter @DThompsonDev so you can find who who is selected! I hope it's YOU!
 
 */
-
+// The input in the text box
 var input = document.getElementById("string");
-document.getElementById("string").setAttribute("maxlength", "140");
-var characterCount = document.getElementById('counterFooter');
-var tweetButton = document.getElementById('btn');
-
-
+// The character counter
+var characterCount = document.getElementById("counterFooter");
+// The button
+var tweetButton = document.getElementById("btn");
+// Event is every time a pressed key is lifted up
 input.addEventListener("keyup", () => {
+    // The string in the input text box
     var text = input.value;
     var countDown = 140 - (input.value.length);
+    // Changes the color of the character count if the remaining number of characters is 20 or less
     countDown <= 20 ? document.getElementById("counterFooter").style.color = "red" : document.getElementById("counterFooter").style.color = "white";
+    // Sets the new character count after each keyup event
     characterCount.innerHTML = countDown + "/140";
-    if (countDown = 0) {
-        event.preventDefault();
-    }
+    // Disables the tweet button if character limit is exceeded
+    countDown < 0 ? document.getElementById("btn").disabled = true : document.getElementById("btn").disabled = false;
 });
-
+// Resets the input value to an empty string, resets the character count, and changes the character count color back to white
 tweetButton.addEventListener("click", () => {
     input.value = '';
     characterCount.innerHTML = "140/140";
+    document.getElementById("counterFooter").style.color = "white";
 })
