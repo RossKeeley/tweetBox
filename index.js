@@ -18,6 +18,7 @@ There will be multiple winners that I select!
 Follow me on twitter @DThompsonDev so you can find who who is selected! I hope it's YOU!
 
 */
+
 // The input in the text box
 var input = document.getElementById("string");
 // The character counter
