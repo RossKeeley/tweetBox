@@ -19,6 +19,7 @@ Follow me on twitter @DThompsonDev so you can find who who is selected! I hope i
 
 */
 
+
 // The input in the text box
 var input = document.getElementById("string");
 // The character counter
